@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-@RegisterForReflection
 public class Gift implements Serializable {
 
     @Id
