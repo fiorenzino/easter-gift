@@ -31,3 +31,7 @@ docker-compose -f docker/docker-compose.yml up
 
  mvn test
 
+
+## LIMITED SIZE
+
+53M ====> easter-gift-1.0-SNAPSHOT-runner
