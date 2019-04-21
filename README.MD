@@ -1,5 +1,5 @@
 
-## easter gift: quakus => hibernate, resteasy. scheduler, cdi, health TEST
+## easter gift: quakus => hibernate, resteasy, scheduler, cdi, health, tracing
 
 
 ./mvnw package -Pnative -DskipTests=true -Dnative-image.container-runtime=docker
@@ -11,6 +11,11 @@ docker-compose -f docker/docker-compose_complete.yml up
 
 
 ## RUN
+Start mariadb(mysql), phpmyadmin and jaegertracing, using docker compose:
+docker-compose -f docker/docker-compose.yml up
+
+and after:
+
 mvn compile quarkus:dev
  
 ## EXTENSION USED
@@ -21,5 +26,8 @@ mvn compile quarkus:dev
  mvn quarkus:add-extension -Dextensions="smallrye-opentracing"
 
 ## TEST
+Start mariadb(mysql), phpmyadmin and jaegertracing, using docker compose:
+docker-compose -f docker/docker-compose.yml up
+
  mvn test
 
